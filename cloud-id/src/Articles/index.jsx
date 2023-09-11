@@ -1,5 +1,6 @@
 import Solution from './Solutions/index.jsx';
 import SolutionImage from '../Assets/advantages.jpg';
+import '../App.css'
 import styled from 'styled-components'
 
 const StyledBlackCard = styled.div`
@@ -28,8 +29,6 @@ const StyledSolution = styled.div`
 const StyledArticle = styled.div`
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
-
 `
 const StyledBloc1 = styled.div`
     display: flex;

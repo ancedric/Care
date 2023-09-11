@@ -6,24 +6,30 @@ import './App.css';
 import App from './Home/index';
 import reportWebVitals from './reportWebVitals';
 import Header from './Header';
-//import { createGlobalStyle } from 'styled-components';
+import { createGlobalStyle } from 'styled-components';
 
-/*const GlobalStyle = createGlobalStyle`
+const GlobalStyle = createGlobalStyle`
 @font-face {
   font-family: 'Ceviche_One';
   src: url('./Assets/Fonts/CevicheOne-Regular.ttf') format ('truetype');
 }
 @font-face {
   font-family: 'Kodchasan';
-  src: local('Kodchasan') @import url('./Assets/Fonts/Kodchasan-Regular.ttf) format ('truetype'); 
+  src: url('./Assets/Fonts/Kodchasan-Regular.ttf) format ('truetype'); 
 }
 @font-face {
   font-family: 'Lilita One';
-  src: local ('Lilita One') @import url('./Assets/Fonts/LilitaOne-Regular.ttf') format ('truetype');
-body {
+  src: url('./Assets/Fonts/LilitaOne-Regular.ttf') format ('truetype');
+h2 {
+  font-family: 'Lilita One';
+}
+li{
+  font-family: 'Kodchasan';
+}
+  body {
     background-color: #1A1A1F;
   }
-`*/
+`
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
