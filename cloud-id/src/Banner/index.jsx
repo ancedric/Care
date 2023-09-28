@@ -1,3 +1,4 @@
+import ReactGA from 'react-ga';
 import { Link } from "react-router-dom"
 import styled from "styled-components"
 import AnimatedText from "./AnimatedText"
@@ -52,7 +53,13 @@ const StyledLink = styled(Link)`
         color: #000;
     }
 `
-
+const handleButtonClick = () => {
+    ReactGA.event({
+    category: 'User',
+    action: 'Button Clicked',
+    label: 'Your Button Label'
+    });
+}
 function Banner(){
     return (
         <StyledBanner>
@@ -63,7 +70,8 @@ function Banner(){
                 <StyltedTextDescription>
                     <p>Nous vous aidons à retrouver facilement votre carte d’identité lorsque vous ne savez plus où elle se trouve. Faites confiance à votre application pour enregistrer vos données d’identification.</p>
                 </StyltedTextDescription>
-                <StyledButton><StyledParagraph><StyledLink to="/">Get started</StyledLink></StyledParagraph></StyledButton>
+                <StyledButton onClick={handleButtonClick}>
+                    <StyledParagraph><StyledLink to="/">Get started</StyledLink></StyledParagraph></StyledButton>
             </StyledBannerText>
             <StyledBannerImage>
                 <img src={BannerImage} alt="banner"/>
